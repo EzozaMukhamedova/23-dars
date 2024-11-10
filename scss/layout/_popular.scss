@@ -1,0 +1,118 @@
+$background-color: #101826;
+
+.popular {
+  &__wrapper {
+    padding: 92px 0;
+  }
+  &__title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  &__title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 57.6px;
+
+    span {
+      color: $BUTTON-COLOR;
+    }
+  }
+  &__btn {
+    width: 134px;
+    height: 52px;
+    padding: 12px 40px;
+    gap: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $BUTTON-COLOR;
+      cursor: pointer;
+      color: $BUTTON-COLOR;
+    }
+  }
+  &__left-wrapper {
+    display: flex;
+    gap: 25px;
+  }
+  &__images__left {
+    display: flex;
+    gap: 25px;
+    &__sub {
+      display: flex;
+      gap: 25px;
+      margin-top: 25px;
+    }
+  }
+
+  &__images img {
+    height: auto;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .owner-icon {
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
+    }
+
+    .owner-details {
+      p {
+        margin: 0;
+        font-size: 0.8em;
+        color: #ddd;
+        transition: color 0.3s;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1em;
+        color: #ffffff;
+        transition: color 0.3s;
+      }
+    }
+  }
+}

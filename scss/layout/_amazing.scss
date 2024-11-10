@@ -1,0 +1,127 @@
+.amazing {
+  &__wrapper {
+    margin: 92px 0;
+  }
+  &-cart__wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+
+    .amazing__cart:last-child {
+      position: relative;
+      &::after {
+        width: 631px;
+        height: 458px;
+        content: "";
+        position: absolute;
+        background: #1f413d;
+        z-index: -1;
+        filter: blur(200px);
+        right: -80px;
+        bottom: -250px;
+      }
+    }
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 57.6px;
+    }
+    h1 span {
+      color: $BUTTON-COLOR;
+    }
+  }
+  &__btn {
+    width: 134px;
+    padding: 12px 40px 12px 40px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: $BACKGROUND-COLOR;
+      border: 1px solid $BUTTON-COLOR;
+    }
+  }
+  &__cart__coco__sub {
+    display: flex;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #838382;
+    }
+  }
+
+  &__cart__ending {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__cart__left {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__cart {
+    width: 410px;
+    padding: 20px;
+    border-radius: 28px;
+    border-top: 1px solid $BUTTON-COLOR;
+
+    background-color: $CART-COLOR;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: lighten($CART-COLOR, 10%);
+    }
+
+    &__coco__sub {
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__coco__info {
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+      margin-bottom: 16px;
+      margin-top: 24px;
+
+      img {
+        transform: translateY(8px);
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.2px;
+        text-align: center;
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__cart__btn {
+    color: $BUTTON-COLOR;
+    background-color: $CART-COLOR;
+    border: 1px solid $BUTTON-COLOR;
+
+    &:hover {
+      color: $TEXT-COLOR;
+      border: 1px solid $BUTTON-COLOR;
+      background-color: $BUTTON-COLOR;
+    }
+  }
+}

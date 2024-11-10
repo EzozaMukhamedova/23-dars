@@ -1,0 +1,105 @@
+.footer {
+  background-color: #111;
+  color: #ffffff5e;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__wrapper {
+    padding: 92px 0 48px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+
+  div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 8px 0;
+
+      a {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+p {
+  color: $TEXT-GREY;
+}
+
+a {
+  color: $TEXT-GREY;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+
+  a {
+    color: $TEXT-COLOR;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #ffffff;
+      img {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.footer__adress {
+  border-top: 1px solid $TEXT-GREY;
+  padding: 48px 0 92px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: $TEXT-GREY;
+
+  &-right {
+    color: $TEXT-GREY;
+    display: flex;
+    gap: 28px;
+
+    a {
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}

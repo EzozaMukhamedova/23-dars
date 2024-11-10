@@ -1,0 +1,41 @@
+.btn {
+  padding: 14.5px 40px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  line-height: 120%;
+  color: white;
+  transition: 0.3s ease-in-out;
+  background-color: $BUTTON-COLOR;
+  box-sizing: border-box;
+
+  &--primary {
+    color: $TEXT-COLOR;
+    background: $BUTTON-COLOR;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $BUTTON-COLOR;
+      background: none;
+      border: 1px solid $BUTTON-COLOR;
+    }
+  }
+  &--secondary {
+    background: rgba(255, 255, 255, 0);
+    color: $TEXT-COLOR;
+
+    &:hover {
+      color: $BUTTON-COLOR;
+    }
+  }
+  &--outline {
+    border-radius: 8px;
+    border: 1px solid $TEXT-COLOR;
+    color: $TEXT-COLOR;
+
+    &:hover {
+      background: $BUTTON-COLOR;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.nav {
+  padding: 28px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__item span {
+    color: $TEXT-GREY;
+    line-height: 160%;
+    position: relative;
+    transition: 0.3s ease-in-out;
+
+    &::after {
+      transition: 0.3s ease-in-out;
+      content: "";
+      width: 0;
+      height: 1px;
+      background: $BUTTON-COLOR;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: -5px;
+    }
+
+    &:hover {
+      color: white;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

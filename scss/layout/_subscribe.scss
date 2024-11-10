@@ -1,0 +1,124 @@
+.subscribe {
+  padding: 60px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 92px 0;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      margin-left: 320px;
+      border-radius: 16px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      left: -8px;
+      right: 0;
+      height: calc(100% + 110px);
+      background-image: url(../../assets/images/subscribe-black-img.png);
+      background-repeat: no-repeat;
+      z-index: 1;
+      border-radius: 16px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 358px;
+      top: -130px;
+      left: -20px;
+      right: -20px;
+      height: calc(100% + 160px);
+      background: #1f413d;
+      border-radius: 24px;
+      z-index: 0;
+      filter: blur(200px);
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: blur(150px);
+      }
+    }
+  }
+
+  &__content {
+    margin-left: 140px;
+    color: $TEXT-COLOR;
+
+    h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: bold;
+      margin-bottom: 16px;
+
+      span {
+        color: $BUTTON-COLOR;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+
+    input[type="email"] {
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      color: $TEXT-COLOR;
+      background-color: $CART-COLOR;
+
+      &::placeholder {
+        color: #bbb;
+      }
+    }
+  }
+
+  button {
+    padding: 12px 24px;
+    color: $TEXT-COLOR;
+    background-color: $BUTTON-COLOR;
+    border: 1px solid $BUTTON-COLOR;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: $BUTTON-COLOR;
+      transform: scale(1.05);
+    }
+  }
+}
